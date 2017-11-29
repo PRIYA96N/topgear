@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .big1{
+      font-size: 25px;
+}
+.bg1{
+    background-color: gainsboro;
+    border: 1px solid black;
+}
+.c1{
+    background-color: black;
+    color:white;
+     border: 1px solid black;
+     border-radius: 5px;
+}
+.di2{
+    background-color: white;
+    color:black;
+    margin-left: 82px;
+     
+}
+.d2{
+    border-right: 1px solid black;
+    margin-top: 70px;
+   height:250px;
+     margin-bottom: 70px;
+}
+
+           ul {
+    margin: 10px;
+    padding: 0px;
+   overflow: hidden;
+    background-color: #111777;
+    width: 250px;
+    height:70px;
+    border-radius:5px;
+}
+
+li {
+    float: left;
+}
+
+.d3 {
+    
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.d32 {
+    
+    display: block;
+   margin-bottom:10px;
+    text-align: center;
+    padding: 9px;
+  
+}
+
+li a:hover {
+    background-color: #111777;
+}
+#demo{
+    color:red;
+}
+</style>
+<script>
+    
+    function fun()
+    {
+      
+        var c=document.getElementById('mail').value;
+       c=c.toLowerCase();
+       if((c.indexOf('.') > -1)&& (c.indexOf('@')>-1))
+        {
+            var d=c.split("@");
+             if((d.length==2) && (d[1].charAt(0)!='.') && (d[1].indexOf('.')>-1))
+             {
+             }
+       else
+        {
+           document.getElementById("demo").innerHTML = "Please enter valid email ID (example:****@***.com)" ;
+           return false;
+        }
+         }
+        else
+        {
+             document.getElementById("demo").innerHTML = "Please enter valid email ID (example:****@***.com)" ;
+             return false;      
+        }
+    }
+</script>
+</head>
+<body>
+
+<div class="container-fluid bg1">
+    <div class="row">
+  <div class="col-sm-5"><b class="big1">Login</b> or <a href=""><u>Register a new Account</u></a>
+      <br><br><br>
+ <b>Forgot Password?</b>
+ <br>
+ <br>
+ <form onsubmit="return fun()">
+     Email ID*
+     <br><input class="bg1" type="text" id="mail" placeholder="****@****.com" required>
+    
+     <p id="demo"></p>
+     <br>
+     <input class="c1" type="submit" value="  Email Password  " >
+ 
+     <br><br>
+ </form>
+    </div>
+       <div class="col-sm-1 d2">
+           
+        <br><br><br><br>
+           <h5><span class="label label-default di2">OR</span></h5>
+       </div>
+       <div class="col-sm-6">
+           <br><br><br><br>
+           <b>  &nbsp; &nbsp; &nbsp; Have a Facebook account?</b>
+           <br>
+           <br>
+            <ul>
+                <li><img class="d32" src="logo.jpg" alt="logo" width="50" height="50" ></li>
+              <li><a class="d3" href="www.facebook.com">Log in with Facebook</a></li>
+            </ul>
+       </div>
+        </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
